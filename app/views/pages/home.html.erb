@@ -1,2 +1,123 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<%#
+<div class="home_container">
+    <div class="home_row">
+        <div class="profile_pic"> <img src="https://i.ibb.co/PMpvq9N/profile-pic.jpg" alt="profile-pic"></div>
+        <div class="site_name"><h1>Nathan Harris</h1>
+            <ul>
+                <li>Hello</li>
+                <li>Hey</li>
+                <li>Hi</li>
+            </ul>
+        </div>
+    
+    </div>
+</div>
+%>
+<div class="home_container">
+<header>
+    <div class="logo">
+    <%= image_tag("/assets/scout-blue.png", alt: "scout logo", width: "130px") %>
+    </div>
+    <button class="nav-toggle" aria-label="toggle navigation">
+        <span class="hamburger"></span>
+    </button>
+    <nav class="nav">
+        <ul class="nav__list">
+            <li class="nav__item"><%= link_to "My Services", root_path(:anchor => "services"), class: "nav__link" %></li>
+            <li class="nav__item"><%= link_to "My Work", root_path(:anchor => "services"), class: "nav__link" %></li>
+            <li class="nav__item"><%= link_to "About Me", root_path(:anchor => "about"), class: "nav__link" %></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- introduction -->
+
+<section class="intro" id="home">
+    <h1 class="section__title section__title--intro">
+        Hi, I am <strong>Nathan Harris</strong>
+    </h1>
+    <p class="section__subtitle section__subtitle--intro">
+        front end dev
+    </p>
+    <%= image_tag("/assets/profile_pic.jpg", alt: "Nathan at work", class: "intro__img", width: "400px") %>
+</section>
+
+<!-- My Services-->
+
+<section class="my-services" id="services">
+    <h2 class="section__title section__title--services">
+       <strong>What I do</strong>
+    </h2>
+    <div class="services">
+        <div class="service">
+        <h3><strong>Web Design</strong></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+
+        <div class="service">
+        <h3><strong>Coding</strong></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+
+        <div class="service">
+        <h3><strong>Photos</strong></h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        </div>
+
+    </div>
+
+     <%= link_to "See My Work", root_path, class: "btn" %>
+
+</section>
+
+
+<!-- About me-->
+
+<section class="about-me" id="about">
+    <h2 class="section__title section__title--about">Who I am</h2>
+    <p class="section__subtitle section__subtitle--about"> Full Stack, based out of Amsterdam</p>
+    <div class="about-me__body">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+        <p></p>
+        <p></p>
+    </div>
+    <%= image_tag("/assets/profile_pic.jpg", alt: "Nathan at work", width: "400px", class: "about-me__img") %>
+</section>
+
+<!-- My work-->
+
+<section class="my-work" id="work">
+    <h2 class="section__title"><strong>My work</strong></h2>
+    <p class="section__subtitle section__subtitle--work">Select projects</p>
+    <div class="portfolio">
+        <a href="#" class="portfolio__item">
+            <img src="https://images.unsplash.com/photo-1596650956793-68f12df4e549?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2690&q=80" alt="" class="portfolio__img">
+        </a>
+        <a href="#" class="portfolio__item">
+            <img src="https://images.unsplash.com/photo-1535378273068-9bb67d5beacd?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1884&q=80" alt="" class="portfolio__img">
+        </a>
+        <a href="#" class="portfolio__item">
+            <img src="https://images.unsplash.com/photo-1528901166007-3784c7dd3653?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="" class="portfolio__img">
+        </a>
+        <a href="#" class="portfolio__item">
+            <img src="https://images.unsplash.com/photo-1596800830960-ae164e59a135?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80" alt="" class="portfolio__img">
+        </a>
+        <a href="#" class="portfolio__item">
+            <img src="https://images.unsplash.com/photo-1599519919738-2e124a9d71b6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1948&q=80" alt="" class="portfolio__img">
+        </a>
+    </div>
+</section>
+
+<!--Footer-->
+
+<footer class="footer">
+<a href="mailto:myemail@email.com" class="footer__link">Contact Me</a>
+    <ul class="social-list">
+        <li class="social--list__item"><a href="#" class="social-list__link"><i class="fab fa-github"></i></a></li>
+        <li class="social--list__item"><a href="#" class="social-list__link"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+
+</footer>
+</div>
+
+<%# javascript_pack_tag "home" %>
